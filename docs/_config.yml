@@ -1,2 +1,4 @@
 theme: jekyll-theme-slate
+include: lab0
+include: lab1
 include: lab2
