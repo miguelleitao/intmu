@@ -2,6 +2,6 @@
 
 ## Labs
 
-### Lab1
-
-### Lab2
+* Lab0
+* Lab1
+* Lab2
