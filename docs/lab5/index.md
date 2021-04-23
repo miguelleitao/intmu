@@ -1,4 +1,4 @@
-# Lab2
+# Lab5
 
 * [Guião](./intmu_lab5.pdf)
 * [Esqueleto de programa](./moinho.c)
