@@ -1,7 +1,7 @@
 #!/bin/bash
 # Dash screen simulator
 # Miguel Leitao, ISEP
-# v0.23, mar-2022
+# v0.24, mar-2022
 bname=dash_temp_img
 img=dash.jpg
 tmpdir=.
@@ -21,7 +21,7 @@ if [ ! -r $img ]; then
 fi
 convert $1 -gravity center -crop 800x600+0+0 +repage ${bpath}_c.png
 convert ${bpath}_c.png -matte -virtual-pixel transparent -distort Perspective "$dist_table" ${bpath}_d.png
-convert -composite $img ${bpath}_d.png out.png
-display out.png 2>/dev/null
-rm -f ${bpath}_?.png
+convert -composite $img ${bpath}_d.png ${bpath}_out.png
+display ${bpath}_out.png 2>/dev/null
+rm -f ${bpath}_*.png
 
