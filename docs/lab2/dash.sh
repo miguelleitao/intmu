@@ -23,5 +23,5 @@ convert $1 -gravity center -crop 800x600+0+0 +repage ${bpath}_c.png
 convert ${bpath}_c.png -matte -virtual-pixel transparent -distort Perspective "$dist_table" ${bpath}_d.png
 convert -composite $img ${bpath}_d.png ${bpath}_out.png
 display ${bpath}_out.png 2>/dev/null
-rm -f ${bpath}_?.png
+rm -f ${bpath}_*.png
 
