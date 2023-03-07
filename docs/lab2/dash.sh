@@ -1,12 +1,12 @@
 #!/bin/bash
 # Dash screen simulator
 # Miguel Leitao, ISEP
-# v0.24, mar-2022
+# v0.25, mar-2023
 bname=dash_temp_img
 img=dash.jpg
 tmpdir=.
 bpath=$tmpdir/$bname
-repo=https://miguelleitao.gitlab.io/intmu/lab2
+repo=https://miguelleitao.github.io/intmu/lab2
 dist_table='1,1 268,122  1,599 257,409  799,599 780,406  799,1 770,130'
 if ! [ -x "$(command -v convert)" ]; then
    echo "ImageMagick not found."
