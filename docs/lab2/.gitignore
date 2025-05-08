@@ -1,4 +1,6 @@
-out.png
+out*.png
 *.x.c
+grid_*.png
+grid_*.tiff
 
 
