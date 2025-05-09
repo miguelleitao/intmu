@@ -50,8 +50,9 @@ out.png: ${IMG}.tiff
 dash: dash.sh
 	shc -o $@ -f $<
 
+.PHONY: clean
 clean:
-	rm -f ${IMG}_*.tiff out*.png
+	rm -f ${IMG}_*.tiff out*.png *.sh.x.c
 
 
 
