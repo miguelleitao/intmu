@@ -1,5 +1,6 @@
 theme: jekyll-theme-slate
-title: "[IntMu](https://miguelleitao.github.io/intmu/)"
+title: IntMu
+main_page_link: "https://miguelleitao.github.io/intmu/"
 include: lab0
 include: lab1
 include: lab2
