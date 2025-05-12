@@ -39,6 +39,42 @@ ${IMG}_800t4.tiff: ${IMG}.tiff
 ${IMG}_960t4.tiff: ${IMG}.tiff
 	${MAGICK} $< -resize 960x540 -background black -gravity center -extent 960x540 $@
 
+ex4: ${IMG}.tiff
+	convert ${IMG}.tiff -separate ${IMG}_RGB_%d.tga
+	@display -resize 50% grid_RGB_0.tga &
+	@display -resize 50% grid_RGB_1.tga &
+	@display -resize 50% grid_RGB_2.tga &
+
+ex5: ex5.1 ex5.2 ex5.3 ex5.4
+
+ex5.1: ${IMG}.tiff
+	convert ${IMG}.tiff -colorspace CMYK -separate ${IMG}_CMYK_%d.tga
+	@display -resize 50% grid_CMYK_0.tga &
+	@display -resize 50% grid_CMYK_1.tga &
+	@display -resize 50% grid_CMYK_2.tga &
+	@display -resize 50% grid_CMYK_3.tga &
+
+ex5.2: ${IMG}.tiff
+	convert ${IMG}.tiff -colorspace HSL -separate ${IMG}_HSL_%d.tga
+	@display -resize 50% grid_HSL_0.tga &
+	@display -resize 50% grid_HSL_1.tga &
+	@display -resize 50% grid_HSL_3.tga &
+
+
+ex5.3: ${IMG}.tiff
+	convert ${IMG}.tiff -colorspace HSB -separate ${IMG}_HSB_%d.tga
+	@display -resize 50% grid_HSB.tga &
+	@display -resize 50% grid_HSB.tga &
+	@display -resize 50% grid_HSB.tga &
+
+ex5.4: ${IMG}.tiff
+	convert ${IMG}.tiff -colorspace YUV -separate ${IMG}_YUV_%d.tga
+	@display -resize 50% grid_YUV.tga &
+	@display -resize 50% grid_YUV.tga &
+	@display -resize 50% grid_YUV.tga &
+
+
+
 ex6.2: out.png
 	identify $<
 
