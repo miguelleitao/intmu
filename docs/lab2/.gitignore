@@ -2,5 +2,6 @@ out*.png
 *.x.c
 grid_*.png
 grid_*.tiff
+grid_*.tga
 
 
